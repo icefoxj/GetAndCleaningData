@@ -1,9 +1,6 @@
----
-title: "Code Book"
-author: "Marcelo Jarretta"
-date: "12/24/2020"
-output: html_document
----
+## Code Book
+Marcelo Jarretta
+12/24/2020
 
 The 'run_analysis.R' script generate two files:
 

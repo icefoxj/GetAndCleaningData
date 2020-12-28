@@ -1,9 +1,6 @@
----
-title: "Get and Cleaning Data"
-author: "Marcelo Jarretta"
-date: "12/24/2020"
-output: html_document
----
+## Get and Cleaning Data
+Marcelo Jarretta
+12/24/2020
 
 This R script (*run_analysis.R*) executes a serie of R command to load the data from experiment and prepare the data following this rules:
 
