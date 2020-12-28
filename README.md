@@ -5,26 +5,26 @@ date: "12/24/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+This R script (*run_analysis.R*) executes a serie of R command to load the data from experiment and prepare the data following this rules:
 
-## R Markdown
+- Merges the training and the test sets to create one data set.
+- Extracts only the measurements on the mean and standard deviation for each measurement. 
+- Uses descriptive activity names to name the activities in the data set appropriately labels the data set with descriptive variable names. 
+- Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The script executes:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+- Load the libraries that will be used in the script
+- Set initial variables that will be used in the commands
+- Read all the txt files into data.table variables
+- Merge the test and training variables into a common variable
+- Set column names based on the txt file
+- Select only columns with *mean* and *std* in the name
+- Map the activity values column to names in the txt file
+- Create the output directory, if don't exists
+- Create the output file, *tidy_data.csv*
+- Summarize the data, calculating the mean of all columns, grouped by *subject* and *activity*
+- Create the output file, *data_summarized.csv*
+- Remove all variables from the memory
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
