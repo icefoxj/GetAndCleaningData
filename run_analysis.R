@@ -6,6 +6,7 @@ inputdata <- "originaldata/UCI HAR Dataset"
 outputdata <- "outputdata"
 outputfile <- "tidy_data.csv"
 outputsummarizedfile <- "data_summarized.csv"
+outputsummarizedtablefile <- "data_summarized.txt"
 
 ## load original files
 test_X <- read.table(file.path(inputdata,"test","X_test.txt"),sep="",header=FALSE)
@@ -62,6 +63,7 @@ if (file.exists(file.path(outputdata,outputsummarizedfile))){
   file.remove(file.path(outputdata,outputsummarizedfile))
 }
 write.csv(data_summarized,file.path(outputdata,outputsummarizedfile),row.names = FALSE)
+write.table(data_summarized,file.path(outputdata,outputsummarizedtablefile),row.name=FALSE)
 
 ## remove variables with original data
 rm(test_X)
